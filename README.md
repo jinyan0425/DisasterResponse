@@ -49,7 +49,7 @@ git clone https://github.com/jinyan0425/DisasterResponse.git
 ## Classification Model
 * The final classifier used was Multi-label Logistic Regression Classifier, and the estimator and paramaters information can be found at [classifier.pkl](models/classifier.pkl).
 * The F1 score of the classifier is decent (weighted: 0.67 and micro: 0.64, because the classes for most message labels (categories) are unbalanced). The model may be improved with more data and more features (beyound the scope of the current project).
-* For the rationales behind the model development and evaluation, please refer to the [notebook](models/train_classifier_prep.ipynb).
+* For the rationales behind the model development and evaluation, please refer to the [notebook](https://github.com/jinyan0425/notebooks/blob/02de59fe0c7b10f061fb34940c449f64f32b5163/DisasterResponse_Prep/train_classifier_prep.ipynb).
 
 <a name="ALA"></a>
 ## Author, License & Acknowledgements
