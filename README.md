@@ -7,6 +7,9 @@
    1. [Data Description](#DataDescription)
    2. [Repo Description](#RepoDescription)
 3. [Getting Started](#GettingStarted)
+   1. [Dependencies](#Dependencies)
+   2. [Installation](#Installation)
+   3. [Execution](#Execution)
 4. [Classification Model](#ClassificationModel)
 5. [Lisense, Author & Acknowledgements](#ALA)
 
@@ -40,16 +43,24 @@ This repo consists of three folders:
 * Others: ```Pickle```
 
 <a name="Installation"></a>
-### Installing
+### Installation
 To clone the git repository:
 ```
 git clone https://github.com/jinyan0425/DisasterResponse.git
 ```
+<a name="Execution"></a>
+### Execution
+* To wrangle data and store the processed data in the database (ETL pipeline), run the command ```python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db```
+* To loads data from the database, trains classifier and saves the classifier as a pickle file (ML pipeline) run the command ```python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
+* To run the app, run the command ```python run.py``` and go to http://0.0.0.0:3000/
+
+
 <a name="ClassificationModel"></a>
 ## Classification Model
 * The final classifier used was Multi-label Logistic Regression Classifier, and the estimator and paramaters information can be found at [classifier.pkl](models/classifier.pkl).
 * The F1 score of the classifier is decent (weighted: 0.67 and micro: 0.64, because the classes for most message labels (categories) are unbalanced). The model may be improved with more data and more features (beyound the scope of the current project).
 * For the rationales behind the model development and evaluation, please refer to the [notebook](https://github.com/jinyan0425/notebooks/blob/02de59fe0c7b10f061fb34940c449f64f32b5163/DisasterResponse_Prep/train_classifier_prep.ipynb).
+
 
 <a name="ALA"></a>
 ## Author, License & Acknowledgements
