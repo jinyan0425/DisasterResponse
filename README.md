@@ -50,7 +50,7 @@ git clone https://github.com/jinyan0425/DisasterResponse.git
 ```
 <a name="Execution"></a>
 ### Execution
-* To wrangle data and store the processed data in the database (ETL pipeline), run the command ```python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db```
+* To wrangle data and store the processed data in the database (ETL pipeline), run the command ```python data/process_data.py data/messages.csv data/categories.csv data/DisasterResponse.db```
 * To loads data from the database, trains classifier and saves the classifier as a pickle file (ML pipeline) run the command ```python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
 * To run the app, run the command ```python run.py``` and go to http://0.0.0.0:3000/
 
