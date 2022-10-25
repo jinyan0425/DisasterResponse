@@ -49,7 +49,7 @@ def load_data(database_filepath):
     '''
     
     # load data from database
-    engine = create_engine(database_filepath)
+    engine = create_engine('sqlite:///'+ database_filepath)
     df = pd.read_sql_table('MessageData', engine)
     
     #drop the entries wit label 2 in 'related_category' (N = 188 out of 26,180), whic is likely to subject to recording error
