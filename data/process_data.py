@@ -97,7 +97,7 @@ def save_data(df, database_filepath):
     
     #save the clean dataset into an sqlite database.
     engine = create_engine('sqlite:///'+ database_filepath)
-    df.to_sql('MessageData', engine, index=False)
+    df.to_sql('MessageData', engine, index=False, if_exists='replace')
     
 
 
